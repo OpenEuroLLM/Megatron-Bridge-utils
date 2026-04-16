@@ -186,7 +186,7 @@ model:
       assistant_lookbehind: 10
       bad_words_ids: null
       begin_suppress_tokens: null
-      bos_token_id: 151643
+      bos_token_id: 1
       cache_config: null
       cache_implementation: null
       constraints: null
@@ -198,9 +198,7 @@ model:
       early_stopping: false
       encoder_no_repeat_ngram_size: 0
       encoder_repetition_penalty: 1.0
-      eos_token_id:
-      - 151645
-      - 151643
+      eos_token_id: 2
       epsilon_cutoff: 0.0
       eta_cutoff: 0.0
       exponential_decay_length_penalty: null
@@ -228,7 +226,7 @@ model:
       output_hidden_states: false
       output_logits: null
       output_scores: false
-      pad_token_id: 151643
+      pad_token_id: 262144
       penalty_alpha: null
       prefill_chunk_size: null
       prompt_lookup_num_tokens: null
