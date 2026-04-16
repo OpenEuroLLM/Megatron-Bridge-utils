@@ -256,7 +256,7 @@ model:
   gradient_accumulation_fusion: true
   hetereogenous_dist_checkpoint: false
   heterogeneous_block_specs: false
-  hf_model_id: openeurollm/Qwen3-0.9B-ne-megatron
+  hf_model_id: openeurollm/Qwen3-0.9B-ne
   hidden_dropout: 0.0
   hidden_size: 1536
   hierarchical_context_parallel_sizes: null
