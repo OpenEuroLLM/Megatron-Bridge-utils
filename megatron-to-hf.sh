@@ -66,7 +66,7 @@ fi
 TOKENIZER_IN="${UTILS_PATH}/tokenizers/${HF_MODEL}"
 TOKENIZER_OUT="${UTILS_PATH}/tokenizers/${HF_TOKENIZER}"
 CONFIG="${UTILS_PATH}/configs/${HF_MODEL}"
-RUN_CONFIG="${UTILS_PATH}/templates/${HF_MODEL}_run_config.yaml"
+RUN_CONFIG="${UTILS_PATH}/templates/${HF_MODEL}/run_config.yaml"
 
 if [ ! -e "$TOKENIZER_IN" ]; then
     echo "ERROR: tokenizer for $HF_MODEL not found in $TOKENIZER_IN" >&2
