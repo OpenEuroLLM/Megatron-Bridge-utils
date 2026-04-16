@@ -273,7 +273,7 @@ model:
   init_model_with_meta_device: false
   is_hybrid_model: false
   kv_channels: 128
-  layernorm_epsilon: 1.0e-06
+  layernorm_epsilon: 1.0e-05
   layernorm_zero_centered_gamma: false
   linear_attention_freq: null
   linear_attention_type: null
@@ -289,7 +289,7 @@ model:
   mamba_num_heads: null
   mamba_state_dim: 128
   masked_softmax_fusion: true
-  max_position_embeddings: 40960
+  max_position_embeddings: 4096
   max_seqlen_per_dp_cp_rank: null
   memory_efficient_layer_norm: false
   microbatch_group_size_per_vp_stage: 1
@@ -385,12 +385,12 @@ model:
   - core_attn
   recompute_num_layers: null
   restore_modelopt_state: false
-  rotary_base: 1000000
+  rotary_base: 10000
   rotary_interleaved: false
   rotary_percent: 1.0
   scatter_embedding_sequence_parallel: true
   seq_len_interpolation_factor: null
-  seq_length: 40960
+  seq_length: 4096
   sequence_parallel: false
   share_embeddings_and_output_weights: true
   should_pad_vocab: false
