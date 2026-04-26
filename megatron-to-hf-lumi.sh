@@ -18,11 +18,11 @@ PROJECT="project_462000963"
 CONTAINER="/scratch/project_462000963/containers/laif-rocm-6.4.4-pytorch-2.9.1-te-2.4.0-fa-2.8.0-triton-3.2.0.sif"
 
 # Directories to bind
-BIND_DIRS="/flash/$PROJECT,/scratch/$PROJECT"
+BIND_DIRS="/scratch,/flash,$(realpath /scratch/$PROJECT),$(realpath /flash/$PROJECT)"
 
 # Paths to Megatron-Bridge-LUMI and Megatron-Bridge-utils repos
-BRIDGE_PATH="/flash/project_462000963/tools/Megatron-Bridge-LUMI"
-UTILS_PATH="/flash/project_462000963/tools/Megatron-Bridge-utils"
+BRIDGE_PATH="/flash/$PROJECT/tools/Megatron-Bridge-LUMI"
+UTILS_PATH="/flash/$PROJECT/tools/Megatron-Bridge-utils"
 
 if [[ $# -ne 4 ]]; then
     echo "Usage: $0 INPUT_PATH OUTPUT_PATH HF_MODEL TOKENIZER" >&2
