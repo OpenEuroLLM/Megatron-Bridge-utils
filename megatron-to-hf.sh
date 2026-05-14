@@ -149,7 +149,7 @@ echo "  hf model : $DUMMY_HF_MODEL_PATH"
 echo "  output   : $OUTPUT_PATH"
 echo "========================================"
 
-export PYTHONPATH="${BRIDGE_PATH}/python-packages:${BRIDGE_PATH}/3rdparty/Megatron-LM:${BRIDGE_PATH}/src:$PYTHONPATH"
+export PYTHONPATH="${BRIDGE_PATH}/python-packages:${BRIDGE_PATH}/3rdparty/Megatron-LM:${BRIDGE_PATH}/src:${PYTHONPATH:-}"
 
 python "$CONVERT_SCRIPT" export \
     --megatron-path "$TMP_MEGATRON_PATH" \
