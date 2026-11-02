@@ -31,6 +31,20 @@ def patch_config_and_tokenizer(hf_path: Path, tokenizer_path: str) -> None:
     print(f"  eos_token_id: {tokenizer.eos_token_id}")
     print(f"  pad_token_id: {tokenizer.pad_token_id}")
 
+    print(f"\nRemoving original tokenizer files from: {hf_path}")
+    stale_files = (
+        list(hf_path.glob("tokenizer*"))
+        + list(hf_path.glob("vocab*"))
+        + list(hf_path.glob("merges.txt"))
+        + list(hf_path.glob("special_tokens_map.json"))
+        + list(hf_path.glob("added_tokens.json"))
+        + list(hf_path.glob("chat_template.jinja"))
+        + list(hf_path.glob("generation_config.json"))
+    )
+    for sf in sorted(set(stale_files)):
+        sf.unlink()
+        print(f"  removed: {sf.name}")
+
     print(f"\nSaving custom tokenizer to: {hf_path}")
     tokenizer.save_pretrained(hf_path)
     tokenizer_files = (
